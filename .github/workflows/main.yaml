@@ -142,8 +142,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "docker-compose.production.yml"
-          target: "~/taski/"
+          target: "/home/${{ secrets.USER }}/taski/"
           overwrite: true
+          rm: true
           debug: true
       - name: Executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
