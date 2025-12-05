@@ -142,7 +142,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "docker-compose.production.yml"
-          target: "/home/${{ secrets.USER }}/taski/"
+          target: "/home/${{ secrets.USER }}/taski/docker-compose.production.yml"
           overwrite: true
           rm: true
           debug: true
